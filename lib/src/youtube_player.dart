@@ -5,10 +5,11 @@ import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'package:youtube_player_flutter/src/fullscreen_youtube_player.dart';
+
 import 'controls.dart';
 import 'progress_bar.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'youtube_player_flags.dart';
 
 part 'player.dart';
@@ -109,8 +110,7 @@ class YoutubePlayer extends StatefulWidget {
     this.flags = const YoutubePlayerFlags(),
     this.startAt = const Duration(seconds: 0),
     this.inFullScreen = false,
-  })  : assert(videoId.length == 11, "Invalid YouTube Video Id"),
-        super(key: key);
+  }) : super(key: key);
 
   /// Converts fully qualified YouTube Url to video id.
   static String convertUrlToId(String url, [bool trimWhitespaces = true]) {
