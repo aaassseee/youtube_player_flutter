@@ -196,12 +196,12 @@ class __PlayerState extends State<_Player> with WidgetsBindingObserver {
 
   String get player {
     String baseUrl = 'https://sarbagyadhaubanjar.github.io/youtube_player';
-    if (Platform.isAndroid) {
-      return '$baseUrl/android';
-    } else if (Platform.isIOS) {
-      return '$baseUrl/ios';
-    } else {
-      return 'https://flutter.io';
-    }
+//    if (Platform.isAndroid) {
+    return '$baseUrl/android';
+//    } else if (Platform.isIOS) {
+//      return '$baseUrl/ios';
+//    } else {
+//      return 'https://flutter.io';
+//    }
   }
 }
